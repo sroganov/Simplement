@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftLegion.Common", "SoftLegion.Common\SoftLegion.Common.csproj", "{28AABB84-3517-40CC-8919-EAB5BFA4199D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28AABB84-3517-40CC-8919-EAB5BFA4199D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28AABB84-3517-40CC-8919-EAB5BFA4199D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28AABB84-3517-40CC-8919-EAB5BFA4199D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28AABB84-3517-40CC-8919-EAB5BFA4199D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {853F62EF-6F75-46F6-8418-6F051DD3FD90}
+	EndGlobalSection
+EndGlobal
