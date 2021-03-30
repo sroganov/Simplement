@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SoftLegion.Common.Core.Entities
+namespace Simplement.Common.Core
 {
     public interface IEntityLink<TFirst, TSecond>
         where TFirst : IEntity

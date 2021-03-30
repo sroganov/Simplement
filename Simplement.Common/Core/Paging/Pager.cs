@@ -1,4 +1,4 @@
-namespace SoftLegion.Common.Core.Paging
+namespace Simplement.Common.Core
 {
     public class Pager
     {

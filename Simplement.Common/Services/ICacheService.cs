@@ -1,14 +1,16 @@
 ﻿using System;
-using SoftLegion.Common.Core.OperationResults;
+using Simplement.Common.Core;
 
-namespace SoftLegion.Common.Services
+namespace Simplement.Common.Services
 {
+    /// <summary>
+    /// Definition of caching service.
+    /// </summary>
     public interface ICacheService : IService
     {
         /// <summary>
         /// Gets existing value or null if no value exists.
         /// </summary>
-        /// <returns></returns>
         OperationResult<T> Get<T>(string key);
 
         /// <summary>
@@ -20,19 +22,16 @@ namespace SoftLegion.Common.Services
         /// <summary>
         /// Updates existing value.
         /// Cache expiration timeout in minutes.
-        /// Returns true if success, otherwise false.
         /// </summary>
         OperationResult Update<T>(string key, T value, int expiration = 1440);
 
         /// <summary>
         /// Removes existing value.
-        /// Returns true if success, otherwise false.
         /// </summary>
         OperationResult Delete(string key);
 
         /// <summary>
         /// Removes ALL values in cache storage.
-        /// Returns true if success, otherwise false.
         /// </summary>
         /// <returns></returns>
         OperationResult Clear();

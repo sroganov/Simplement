@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SoftLegion.Common.Extensions
+namespace Simplement.Common.Extensions
 {
     public static class CollectionExtensions
     {
@@ -13,7 +13,7 @@ namespace SoftLegion.Common.Extensions
 
         public static TValue GetOrDefault<TKey, TValue>(this Dictionary<TKey, TValue> dictionary, TKey key)
         {
-            return dictionary.ContainsKey(key) ? dictionary[key] : default(TValue);
+            return dictionary.ContainsKey(key) ? dictionary[key] : default;
         }
     }
 }

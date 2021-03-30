@@ -1,4 +1,4 @@
-﻿namespace SoftLegion.Common.Utils
+﻿namespace Simplement.Common.Utils
 {
     public static class ReflectionUtils
     {
@@ -7,7 +7,7 @@
         /// </summary>
         public static object GetValue(object obj, string propertyPath)
         {
-            if (propertyPath == null)
+            if (string.IsNullOrEmpty(propertyPath))
                 return null;
 
             var properties = propertyPath.Split('.');

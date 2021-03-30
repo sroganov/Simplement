@@ -42,18 +42,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Resources\CommonResources.Designer.cs">
+    <Compile Update="Resources\Global.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>CommonResources.resx</DependentUpon>
+      <DependentUpon>Global.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Resources\CommonResources.resx">
+    <EmbeddedResource Update="Resources\Global.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>CommonResources.Designer.cs</LastGenOutput>
-      <CustomToolNamespace>SoftLegion.Common</CustomToolNamespace>
+      <LastGenOutput>Global.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Simplement.Common.Resources</CustomToolNamespace>
     </EmbeddedResource>
   </ItemGroup>
 

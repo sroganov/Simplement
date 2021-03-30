@@ -126,7 +126,7 @@
   <data name="Entity_LastModifiedDate" xml:space="preserve">
     <value>Дата последнего изменения</value>
   </data>
-  <data name="Error_WhileProcessingRequest" xml:space="preserve">
+  <data name="Error_RequestProcessing" xml:space="preserve">
     <value>Приносим свои извинения. Произошла непредвиденная ошибка во время обрабоки запроса.</value>
   </data>
   <data name="Log_Action_Create" xml:space="preserve">
@@ -139,33 +139,9 @@
     <value>Редактирование</value>
   </data>
   <data name="Misc_EnglishLettersCapital" xml:space="preserve">
-    <value>ABCDEFGHIJKLMNOPQRSTUVWXYZ</value>
+      <value>ABCDEFGHIJKLMNOPQRSTUVWXYZ</value>
   </data>
-  <data name="Validation_Error" xml:space="preserve">
+  <data name="Error_Validation" xml:space="preserve">
     <value>Ошибка валидации.</value>
-  </data>
-  <data name="Validation_FromToInvalid" xml:space="preserve">
-    <value>Значение {0} не может быть больше {1}.</value>
-  </data>
-  <data name="Validation_InvalidDateTime" xml:space="preserve">
-    <value>Значение не является датой.</value>
-  </data>
-  <data name="Validation_InvalidGuidString" xml:space="preserve">
-    <value>Строка не соответсвует формату GUID.</value>
-  </data>
-  <data name="Validation_InvalidPropertyNotBool" xml:space="preserve">
-    <value>Значение не является булевым.</value>
-  </data>
-  <data name="Validation_NotIComparable" xml:space="preserve">
-    <value>Тип поля модели {0} - не поддерживает сравнения.</value>
-  </data>
-  <data name="Validation_NotResidentInnInvalid" xml:space="preserve">
-    <value>ИНН для нерезидентов РУз не должно превышать 20 символов.</value>
-  </data>
-  <data name="Validation_ResidentInnInvalid" xml:space="preserve">
-    <value>ИНН для резидентов РУз не должно быть строго 9-ть символов.</value>
-  </data>
-  <data name="Validation_UnknowPropery" xml:space="preserve">
-    <value>Неизвестное поле модели {0}.</value>
   </data>
 </root>

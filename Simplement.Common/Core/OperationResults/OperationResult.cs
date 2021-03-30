@@ -1,18 +1,17 @@
-﻿using SoftLegion.Common.Core.Enums;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Simplement.Common.Resources;
 
-namespace SoftLegion.Common.Core.OperationResults
+namespace Simplement.Common.Core
 {
     public class OperationResult
     {
         public OperationStatus Result { get; set; } = OperationStatus.Failed;
         public string ErrorMessage { get; set; } = string.Empty;
-        public List<string> ErrorMessageList { get; set; } = new List<string>();
-        public List<string> ConfirmationMessages { get; set; } = new List<string>();
+        public List<string> ErrorMessageList { get; set; } = new();
 
         public static OperationResult Success(string message = "")
         {
-            return new OperationResult
+            return new()
             {
                 Result = OperationStatus.Success,
                 ErrorMessage = message
@@ -21,8 +20,7 @@ namespace SoftLegion.Common.Core.OperationResults
 
         public static OperationResult Success(List<string> messagesList)
         {
-            if (messagesList == null)
-                messagesList = new List<string>();
+            messagesList ??= new List<string>();
 
             return new OperationResult
             {
@@ -38,8 +36,7 @@ namespace SoftLegion.Common.Core.OperationResults
 
         public static OperationResult Fail(string message = null, List<string> messagesList = null)
         {
-            if (messagesList == null)
-                messagesList = new List<string>();
+            messagesList ??= new List<string>();
 
             return new OperationResult
             {
@@ -52,13 +49,11 @@ namespace SoftLegion.Common.Core.OperationResults
 
     public class OperationResult<T> : OperationResult
     {
-        public T Value { get; set; }
-
         public OperationResult()
         {
         }
 
-        public OperationResult(OperationResult result, T value = default(T))
+        public OperationResult(OperationResult result, T value = default)
         {
             ErrorMessageList = result.ErrorMessageList;
             Value = value;
@@ -66,9 +61,11 @@ namespace SoftLegion.Common.Core.OperationResults
             ErrorMessage = result.ErrorMessage;
         }
 
+        public T Value { get; set; }
+
         public static OperationResult<T> Success(T value, string message = "")
         {
-            return new OperationResult<T>
+            return new()
             {
                 Value = value,
                 Result = OperationStatus.Success,
@@ -78,8 +75,7 @@ namespace SoftLegion.Common.Core.OperationResults
 
         public static OperationResult<T> Success(T value, List<string> messagesList)
         {
-            if (messagesList == null)
-                messagesList = new List<string>();
+            messagesList ??= new List<string>();
 
             return new OperationResult<T>
             {
@@ -91,25 +87,24 @@ namespace SoftLegion.Common.Core.OperationResults
 
         public static OperationResult<T> Fail()
         {
-            return Fail(CommonResources.Error_WhileProcessingRequest);
+            return Fail(Global.Error_RequestProcessing);
         }
 
-        public static OperationResult<T> Fail(string message = null)
+        public static OperationResult<T> Fail(string message)
         {
             return Fail(message, new List<string>());
         }
 
         public new static OperationResult<T> Fail(List<string> messagesList)
         {
-            if (messagesList == null)
-                messagesList = new List<string>();
-            return Fail(CommonResources.Error_WhileProcessingRequest, messagesList);
+            messagesList ??= new List<string>();
+
+            return Fail(Global.Error_RequestProcessing, messagesList);
         }
 
-        public new static OperationResult<T> Fail(string message = null, List<string> messagesList = null)
+        public new static OperationResult<T> Fail(string message, List<string> messagesList)
         {
-            if (messagesList == null)
-                messagesList = new List<string>();
+            messagesList ??= new List<string>();
 
             return new OperationResult<T>
             {
@@ -121,26 +116,24 @@ namespace SoftLegion.Common.Core.OperationResults
 
         public static OperationResult<T> Fail(T value)
         {
-            return Fail(value, CommonResources.Error_WhileProcessingRequest, new List<string>());
+            return Fail(value, Global.Error_RequestProcessing, new List<string>());
         }
 
-        public static OperationResult<T> Fail(T value, string message = null)
+        public static OperationResult<T> Fail(T value, string message)
         {
             return Fail(value, message, new List<string>());
         }
 
         public static OperationResult<T> Fail(T value, List<string> messagesList)
         {
-            if (messagesList == null)
-                messagesList = new List<string>();
+            messagesList ??= new List<string>();
 
             return Fail(value, null, messagesList);
         }
 
-        public static OperationResult<T> Fail(T value, string message = null, List<string> messagesList = null)
+        public static OperationResult<T> Fail(T value, string message, List<string> messagesList)
         {
-            if (messagesList == null)
-                messagesList = new List<string>();
+            messagesList ??= new List<string>();
 
             return new OperationResult<T>
             {
@@ -153,12 +146,12 @@ namespace SoftLegion.Common.Core.OperationResults
 
         public static OperationResult<T> InvalidModel(T item, string message = "")
         {
-            return InvalidModel(item, new List<string> { message });
+            return InvalidModel(item, new List<string> {message});
         }
 
         public static OperationResult<T> InvalidModel(T item, List<string> messageList)
         {
-            return new OperationResult<T>
+            return new()
             {
                 Result = OperationStatus.InvalidModel,
                 Value = item,

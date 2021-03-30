@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SoftLegion.Common.Extensions
+namespace Simplement.Common.Extensions
 {
     public static class ExceptionExtensions
     {

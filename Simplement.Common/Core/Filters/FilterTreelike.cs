@@ -1,6 +1,6 @@
 using System;
 
-namespace SoftLegion.Common.Core.Filters
+namespace Simplement.Common.Core
 {
     /// <summary>
     /// Default filter for objects with parents.

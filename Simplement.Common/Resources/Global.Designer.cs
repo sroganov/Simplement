@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SoftLegion.Common {
+namespace Simplement.Common.Resources {
     using System;
     
     
@@ -19,17 +19,17 @@ namespace SoftLegion.Common {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class CommonResources {
+    public class Global {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal CommonResources() {
+        internal Global() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace SoftLegion.Common {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SoftLegion.Common.Resources.CommonResources", typeof(CommonResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Simplement.Common.Resources.Global", typeof(Global).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -90,9 +90,18 @@ namespace SoftLegion.Common {
         /// <summary>
         ///   Looks up a localized string similar to Приносим свои извинения. Произошла непредвиденная ошибка во время обрабоки запроса..
         /// </summary>
-        public static string Error_WhileProcessingRequest {
+        public static string Error_RequestProcessing {
             get {
-                return ResourceManager.GetString("Error_WhileProcessingRequest", resourceCulture);
+                return ResourceManager.GetString("Error_RequestProcessing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ошибка валидации..
+        /// </summary>
+        public static string Error_Validation {
+            get {
+                return ResourceManager.GetString("Error_Validation", resourceCulture);
             }
         }
         
@@ -129,87 +138,6 @@ namespace SoftLegion.Common {
         public static string Misc_EnglishLettersCapital {
             get {
                 return ResourceManager.GetString("Misc_EnglishLettersCapital", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Ошибка валидации..
-        /// </summary>
-        public static string Validation_Error {
-            get {
-                return ResourceManager.GetString("Validation_Error", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Значение {0} не может быть больше {1}..
-        /// </summary>
-        public static string Validation_FromToInvalid {
-            get {
-                return ResourceManager.GetString("Validation_FromToInvalid", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Значение не является датой..
-        /// </summary>
-        public static string Validation_InvalidDateTime {
-            get {
-                return ResourceManager.GetString("Validation_InvalidDateTime", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Строка не соответсвует формату GUID..
-        /// </summary>
-        public static string Validation_InvalidGuidString {
-            get {
-                return ResourceManager.GetString("Validation_InvalidGuidString", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Значение не является булевым..
-        /// </summary>
-        public static string Validation_InvalidPropertyNotBool {
-            get {
-                return ResourceManager.GetString("Validation_InvalidPropertyNotBool", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Тип поля модели {0} - не поддерживает сравнения..
-        /// </summary>
-        public static string Validation_NotIComparable {
-            get {
-                return ResourceManager.GetString("Validation_NotIComparable", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to ИНН для нерезидентов РУз не должно превышать 20 символов..
-        /// </summary>
-        public static string Validation_NotResidentInnInvalid {
-            get {
-                return ResourceManager.GetString("Validation_NotResidentInnInvalid", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to ИНН для резидентов РУз не должно быть строго 9-ть символов..
-        /// </summary>
-        public static string Validation_ResidentInnInvalid {
-            get {
-                return ResourceManager.GetString("Validation_ResidentInnInvalid", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Неизвестное поле модели {0}..
-        /// </summary>
-        public static string Validation_UnknowPropery {
-            get {
-                return ResourceManager.GetString("Validation_UnknowPropery", resourceCulture);
             }
         }
     }

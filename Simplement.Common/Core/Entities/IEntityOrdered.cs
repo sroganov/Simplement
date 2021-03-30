@@ -1,4 +1,4 @@
-﻿namespace SoftLegion.Common.Core.Entities
+﻿namespace Simplement.Common.Core
 {
     public interface IEntityOrdered : IEntity
     {

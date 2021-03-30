@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace SoftLegion.Common.Core.Enums
+namespace Simplement.Common.Core
 {
     [JsonConverter(typeof(StringEnumConverter))]
     public enum OperationStatus

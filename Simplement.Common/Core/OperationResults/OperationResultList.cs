@@ -1,17 +1,13 @@
 ﻿using System.Collections.Generic;
-using SoftLegion.Common.Core.Enums;
 
-namespace SoftLegion.Common.Core.OperationResults
+namespace Simplement.Common.Core
 {
     public class OperationResultList : OperationResult
     {
-
     }
 
     public class OperationResultList<T> : OperationResultList
     {
-        public List<T> Values { get; set; } = new List<T>();
-
         public OperationResultList()
         {
         }
@@ -32,9 +28,11 @@ namespace SoftLegion.Common.Core.OperationResults
             ErrorMessage = result.ErrorMessage;
         }
 
+        public List<T> Values { get; set; } = new();
+
         public static OperationResultList<T> Success(List<T> values, string message = "")
         {
-            return new OperationResultList<T>
+            return new()
             {
                 Values = values,
                 Result = OperationStatus.Success,
@@ -44,7 +42,7 @@ namespace SoftLegion.Common.Core.OperationResults
 
         public new static OperationResultList<T> Fail(string message = null, List<string> messageList = null)
         {
-            return new OperationResultList<T>()
+            return new()
             {
                 ErrorMessage = !string.IsNullOrEmpty(message) ? message : string.Empty,
                 ErrorMessageList = messageList != null && messageList.Count > 0 ? messageList : new List<string>(),
