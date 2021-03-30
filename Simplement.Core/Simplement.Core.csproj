@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description />
+    <PackageLicenseFile>license.txt</PackageLicenseFile>
+    <Authors>Sergey Roganov</Authors>
+    <Company>NTense</Company>
+    <Copyright />
+    <PackageIcon>logo.png</PackageIcon>
+    <RepositoryUrl>https://github.com/sroganov/Simplement</RepositoryUrl>
+    <UserSecretsId>779340e4-f283-4e12-86ae-be9c94b3ae10</UserSecretsId>
+    <Version>1.0.0</Version>
+    <LangVersion>9</LangVersion>
+    <Product>Simplement Framework</Product>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="nuget.config" />
+    <None Remove="publish package.cmd" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\license.txt">
+      <Link>license.txt</Link>
+    </Content>
+  </ItemGroup>
+
+</Project>

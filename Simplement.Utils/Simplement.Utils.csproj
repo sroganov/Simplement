@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Simplement.Core\Simplement.Core.csproj" />
+      <ProjectReference Include="..\Simplement.Extensions\Simplement.Extensions.csproj" />
+    </ItemGroup>
+
+</Project>
