@@ -1,7 +1,23 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Description/>
+        <PackageLicenseFile>license.txt</PackageLicenseFile>
+        <Authors>Sergey Roganov</Authors>
+        <Copyright/>
+        <RepositoryUrl>https://github.com/sroganov/Simplement</RepositoryUrl>
+        <Version>1.0.0</Version>
+        <LangVersion>9</LangVersion>
+        <Product>Simplement Framework - Extensions</Product>
+        <PackageProjectUrl>https://github.com/sroganov/Simplement</PackageProjectUrl>
     </PropertyGroup>
 
+    <ItemGroup>
+        <Content Include="..\license.txt">
+            <Link>license.txt</Link>
+            <Pack>true</Pack>
+            <PackagePath></PackagePath>
+        </Content>
+    </ItemGroup>
 </Project>

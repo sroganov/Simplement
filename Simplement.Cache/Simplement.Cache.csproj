@@ -1,15 +1,28 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Description/>
+        <PackageLicenseFile>license.txt</PackageLicenseFile>
+        <Authors>Sergey Roganov</Authors>
+        <Copyright/>
+        <RepositoryUrl>https://github.com/sroganov/Simplement</RepositoryUrl>
+        <Version>1.0.0</Version>
+        <LangVersion>9</LangVersion>
+        <Product>Simplement Framework - Cache</Product>
+        <PackageProjectUrl>https://github.com/sroganov/Simplement</PackageProjectUrl>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Simplement.Core\Simplement.Core.csproj" />
+        <PackageReference Include="Simplement.Core" Version="1.0.0"/>
+        <PackageReference Include="System.Runtime.Caching" Version="5.0.0"/>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="System.Runtime.Caching" Version="5.0.0" />
+        <Content Include="..\license.txt">
+            <Link>license.txt</Link>
+            <Pack>true</Pack>
+            <PackagePath></PackagePath>
+        </Content>
     </ItemGroup>
-
 </Project>
