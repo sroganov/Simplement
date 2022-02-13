@@ -2,10 +2,10 @@
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Description/>
+        <Description />
         <PackageLicenseFile>license.txt</PackageLicenseFile>
         <Authors>Sergey Roganov</Authors>
-        <Copyright/>
+        <Copyright />
         <RepositoryUrl>https://github.com/sroganov/Simplement</RepositoryUrl>
         <Version>1.0.0</Version>
         <LangVersion>9</LangVersion>
@@ -22,12 +22,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <None Remove="nuget.config"/>
-        <None Remove="publish package.cmd"/>
+        <None Remove="nuget.config" />
+        <None Remove="publish package.cmd" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="12.0.3"/>
+        <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     </ItemGroup>
 
     <ItemGroup>
