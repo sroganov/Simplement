@@ -9,6 +9,9 @@ namespace Simplement.Core
 
         public string SearchText { get; set; }
 
+        public DateTime? CreationDate { get; set; }
+        public Guid? CreatedBy { get; set; }
+
         public SortDirection? OrderBy { get; set; }
     }
 }

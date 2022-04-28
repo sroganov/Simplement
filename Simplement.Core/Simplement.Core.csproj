@@ -1,6 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Description />
         <PackageLicenseFile>license.txt</PackageLicenseFile>
@@ -11,6 +10,8 @@
         <LangVersion>9</LangVersion>
         <Product>Simplement Framework</Product>
         <PackageProjectUrl>https://github.com/sroganov/Simplement</PackageProjectUrl>
+        <PackageVersion>1.0.3</PackageVersion>
+        <TargetFrameworks>net5.0;net6.0;netcoreapp3.1;netstandard2.1</TargetFrameworks>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
