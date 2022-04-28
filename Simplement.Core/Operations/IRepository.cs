@@ -2,7 +2,7 @@
 
 namespace Simplement.Core
 {
-    public interface IOperation<T, in TFilter>
+    public interface IRepository<T, in TFilter>
         where T : IEntity
         where TFilter : FilterBase
     {

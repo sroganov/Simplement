@@ -2,7 +2,7 @@
 
 namespace Simplement.Core
 {
-    public interface IOperationHistory<T, THistory, in TFilter> : IOperation<T, TFilter>
+    public interface IRepositoryHistory<T, THistory, in TFilter> : IRepository<T, TFilter>
         where T : IEntity
         where THistory : IEntityHistory<T>
         where TFilter : FilterHistoryBase

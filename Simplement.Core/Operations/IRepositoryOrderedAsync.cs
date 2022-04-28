@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace Simplement.Core
 {
-    public interface IOperationOrderedAsync<T, in TFilter> : IOperationAsync<T, TFilter>
+    public interface IRepositoryOrderedAsync<T, in TFilter> : IRepositoryAsync<T, TFilter>
         where T : IEntityOrdered
         where TFilter : FilterBase
     {

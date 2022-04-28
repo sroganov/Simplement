@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace Simplement.Core
 {
-    public interface IOperationHistoryAsync<T, THistory, in TFilter> : IOperationAsync<T, TFilter>
+    public interface IRepositoryHistoryAsync<T, THistory, in TFilter> : IRepositoryAsync<T, TFilter>
         where T : IEntity
         where THistory : IEntityHistory<T>
         where TFilter : FilterHistoryBase
