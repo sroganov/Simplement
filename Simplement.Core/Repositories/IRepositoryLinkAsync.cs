@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace Simplement.Core
 {
-    public interface IOperationLinkAsync<TModel, in TFilter>
+    public interface IRepositoryLinkAsync<TModel, in TFilter>
         where TFilter : FilterLink
     {
         Task<OperationResultList<TModel>> Get(Guid parentId);

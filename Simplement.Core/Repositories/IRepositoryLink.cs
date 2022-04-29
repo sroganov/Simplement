@@ -2,7 +2,7 @@
 
 namespace Simplement.Core
 {
-    public interface IOperationLink<TModel, in TFilter>
+    public interface IRepositoryLink<TModel, in TFilter>
         where TFilter : FilterLink
     {
         OperationResultList<TModel> Get(Guid parentId);
