@@ -11,7 +11,7 @@
         <Product>Simplement Framework - Extensions</Product>
         <PackageProjectUrl>https://github.com/sroganov/Simplement</PackageProjectUrl>
         <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
-        <PackageVersion>1.0.1</PackageVersion>
+        <PackageVersion>1.0.4</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>

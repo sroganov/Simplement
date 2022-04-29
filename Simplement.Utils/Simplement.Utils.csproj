@@ -11,12 +11,12 @@
         <Product>Simplement Framework - Utils</Product>
         <PackageProjectUrl>https://github.com/sroganov/Simplement</PackageProjectUrl>
         <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
-        <PackageVersion>1.0.1</PackageVersion>
+        <PackageVersion>1.0.4</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Simplement.Core" Version="1.0.0" />
-        <PackageReference Include="Simplement.Extensions" Version="1.0.0" />
+        <PackageReference Include="Simplement.Core" Version="1.0.4" />
+        <PackageReference Include="Simplement.Extensions" Version="1.0.4" />
     </ItemGroup>
 
     <ItemGroup>

@@ -7,16 +7,16 @@
         <Copyright />
         <RepositoryUrl>https://github.com/sroganov/Simplement</RepositoryUrl>
         <Version>1.0.0</Version>
-        <LangVersion>9</LangVersion>
+        <LangVersion>10</LangVersion>
         <Product>Simplement Framework - Cache</Product>
         <PackageProjectUrl>https://github.com/sroganov/Simplement</PackageProjectUrl>
+        <PackageVersion>1.0.4</PackageVersion>
         <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
-        <PackageVersion>1.0.1</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Simplement.Core" Version="1.0.0" />
-        <PackageReference Include="System.Runtime.Caching" Version="5.0.0" />
+        <PackageReference Include="Simplement.Core" Version="1.0.4" />
+        <PackageReference Include="System.Runtime.Caching" Version="6.0.0" />
     </ItemGroup>
 
     <ItemGroup>
