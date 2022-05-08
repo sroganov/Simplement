@@ -7,7 +7,7 @@ namespace Simplement.Core
         Guid Id { get; set; }
 
         DateTime CreationDate { get; set; }
-        Guid? CreatedBy { get; set; }
+        Guid? CreatedById { get; set; }
 
         bool IsActive { get; set; }
     }

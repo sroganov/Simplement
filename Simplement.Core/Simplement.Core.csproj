@@ -10,7 +10,7 @@
         <LangVersion>10</LangVersion>
         <Product>Simplement Framework</Product>
         <PackageProjectUrl>https://github.com/sroganov/Simplement</PackageProjectUrl>
-        <PackageVersion>1.0.4</PackageVersion>
+        <PackageVersion>1.0.5</PackageVersion>
         <TargetFrameworks>net5.0;net6.0;netcoreapp3.1;netstandard2.1</TargetFrameworks>
     </PropertyGroup>
 
