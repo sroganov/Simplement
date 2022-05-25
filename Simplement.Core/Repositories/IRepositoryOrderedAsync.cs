@@ -7,7 +7,7 @@ namespace Simplement.Core
         where T : IEntityOrdered
         where TFilter : FilterBase
     {
-        Task<OperationResult<T>> MoveUp(Guid id, TFilter filter = null);
-        Task<OperationResult<T>> MoveDown(Guid id, TFilter filter = null);
+        Task<OperationResult<T>> MoveUpAsync(Guid id, TFilter filter = null);
+        Task<OperationResult<T>> MoveDownAsync(Guid id, TFilter filter = null);
     }
 }

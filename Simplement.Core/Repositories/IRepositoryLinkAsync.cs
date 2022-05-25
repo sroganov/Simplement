@@ -6,9 +6,9 @@ namespace Simplement.Core
     public interface IRepositoryLinkAsync<TModel, in TFilter>
         where TFilter : FilterLink
     {
-        Task<OperationResultList<TModel>> Get(Guid parentId);
-        Task<OperationResultPage<TModel>> Get(PagerParams pager = null, TFilter filter = null);
+        Task<OperationResultList<TModel>> GetAsync(Guid parentId);
+        Task<OperationResultPage<TModel>> GetAsync(PagerParams pager = null, TFilter filter = null);
 
-        Task<OperationResult<TModel>> Get(Guid parentId, Guid childId);
+        Task<OperationResult<TModel>> GetAsync(Guid parentId, Guid childId);
     }
 }

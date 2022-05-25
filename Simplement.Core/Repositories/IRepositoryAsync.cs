@@ -7,14 +7,14 @@ namespace Simplement.Core
         where T : IEntity
         where TFilter : FilterBase
     {
-        Task<OperationResult<T>> Get(Guid id);
-        Task<OperationResultPage<T>> Get(PagerParams pager = null, TFilter filter = null);
-        Task<OperationResultList<T>> GetAll();
-        Task<OperationResult<int>> GetRecordsCount(TFilter filter);
+        Task<OperationResult<T>> GetAsync(Guid id);
+        Task<OperationResultPage<T>> GetAsync(PagerParams pager = null, TFilter filter = null);
+        Task<OperationResultList<T>> GetAllAsync();
+        Task<OperationResult<int>> GetRecordsCountAsync(TFilter filter);
 
-        Task<OperationResult<T>> Add(T item);
-        Task<OperationResult<T>> Update(T item);
-        Task<OperationResult<T>> Delete(Guid id);
-        Task<OperationResult<T>> UndoDelete(Guid id);
+        Task<OperationResult<T>> AddAsync(T item);
+        Task<OperationResult<T>> UpdateAsync(T item);
+        Task<OperationResult<T>> DeleteAsync(Guid id);
+        Task<OperationResult<T>> UndoDeleteAsync(Guid id);
     }
 }

@@ -8,7 +8,7 @@ namespace Simplement.Core
         where THistory : IEntityHistory<T>
         where TFilter : FilterHistoryBase
     {
-        Task<OperationResult<THistory>> GetHistory(Guid entityId, DateTime recordDate);
-        Task<OperationResultPage<T>> GetHistory(PagerParams pager = null, TFilter filter = null);
+        Task<OperationResult<THistory>> GetHistoryAsync(Guid entityId, DateTime recordDate);
+        Task<OperationResultPage<T>> GetHistoryAsync(PagerParams pager = null, TFilter filter = null);
     }
 }
