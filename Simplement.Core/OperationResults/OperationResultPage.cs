@@ -9,21 +9,31 @@ namespace Simplement.Core
 
         public static OperationResultPage<T> Success(List<T> values, Pager pager, string message = "", List<string> errors = null)
         {
-            return new()
+            return new OperationResultPage<T>
             {
-                Pager = pager,
                 Values = values,
                 Result = OperationStatus.Success,
                 Message = !string.IsNullOrEmpty(message) ? message : string.Empty,
-                Errors = errors ?? new List<string>()
+                Errors = errors ?? new List<string>(),
+                Pager = pager
             };
         }
 
         public new static OperationResultPage<T> Fail(string message = null, List<string> errors = null)
         {
-            return new()
+            return new OperationResultPage<T>
             {
                 Result = OperationStatus.Failed,
+                Message = !string.IsNullOrEmpty(message) ? message : string.Empty,
+                Errors = errors ?? new List<string>()
+            };
+        }
+
+        public new static OperationResultPage<T> Fail(OperationStatus status, string message = null, List<string> errors = null)
+        {
+            return new OperationResultPage<T>
+            {
+                Result = status,
                 Message = !string.IsNullOrEmpty(message) ? message : string.Empty,
                 Errors = errors ?? new List<string>()
             };

@@ -8,7 +8,7 @@ namespace Simplement.Core
 
         public static OperationResultList<T> Success(List<T> values, string message = "", List<string> errors = null)
         {
-            return new()
+            return new OperationResultList<T>
             {
                 Values = values,
                 Result = OperationStatus.Success,
@@ -19,9 +19,19 @@ namespace Simplement.Core
 
         public new static OperationResultList<T> Fail(string message = null, List<string> errors = null)
         {
-            return new()
+            return new OperationResultList<T>
             {
                 Result = OperationStatus.Failed,
+                Message = !string.IsNullOrEmpty(message) ? message : string.Empty,
+                Errors = errors ?? new List<string>()
+            };
+        }
+
+        public new static OperationResultList<T> Fail(OperationStatus status, string message = null, List<string> errors = null)
+        {
+            return new OperationResultList<T>
+            {
+                Result = status,
                 Message = !string.IsNullOrEmpty(message) ? message : string.Empty,
                 Errors = errors ?? new List<string>()
             };

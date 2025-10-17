@@ -10,7 +10,7 @@ namespace Simplement.Core
 
         public static OperationResult Success(string message = null, List<string> errors = null)
         {
-            return new()
+            return new OperationResult
             {
                 Result = OperationStatus.Success,
                 Message = !string.IsNullOrEmpty(message) ? message : string.Empty,
@@ -20,9 +20,19 @@ namespace Simplement.Core
 
         public static OperationResult Fail(string message = null, List<string> errors = null)
         {
-            return new()
+            return new OperationResult
             {
                 Result = OperationStatus.Failed,
+                Message = !string.IsNullOrEmpty(message) ? message : string.Empty,
+                Errors = errors ?? new List<string>()
+            };
+        }
+
+        public static OperationResult Fail(OperationStatus status, string message = null, List<string> errors = null)
+        {
+            return new OperationResult
+            {
+                Result = status,
                 Message = !string.IsNullOrEmpty(message) ? message : string.Empty,
                 Errors = errors ?? new List<string>()
             };
@@ -35,7 +45,7 @@ namespace Simplement.Core
 
         public static OperationResult<T> Success(T value, string message = null, List<string> errors = null)
         {
-            return new()
+            return new OperationResult<T>
             {
                 Value = value,
                 Result = OperationStatus.Success,
@@ -46,10 +56,21 @@ namespace Simplement.Core
 
         public new static OperationResult<T> Fail(string message = null, List<string> errors = null)
         {
-            return new()
+            return new OperationResult<T>
             {
                 Value = default,
                 Result = OperationStatus.Failed,
+                Message = !string.IsNullOrEmpty(message) ? message : string.Empty,
+                Errors = errors ?? new List<string>()
+            };
+        }
+
+        public new static OperationResult<T> Fail(OperationStatus status, string message = null, List<string> errors = null)
+        {
+            return new OperationResult<T>
+            {
+                Value = default,
+                Result = status,
                 Message = !string.IsNullOrEmpty(message) ? message : string.Empty,
                 Errors = errors ?? new List<string>()
             };

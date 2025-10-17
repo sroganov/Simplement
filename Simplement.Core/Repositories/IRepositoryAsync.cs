@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Simplement.Core
@@ -7,14 +8,14 @@ namespace Simplement.Core
         where T : IEntity
         where TFilter : FilterBase
     {
-        Task<OperationResult<T>> GetAsync(Guid id);
-        Task<OperationResultPage<T>> GetAsync(PagerParams pager = null, TFilter filter = null);
-        Task<OperationResultList<T>> GetAllAsync();
-        Task<OperationResult<int>> GetRecordsCountAsync(TFilter filter);
+        Task<OperationResult<T>> GetAsync(Guid id, CancellationToken cancellationToken = default);
+        Task<OperationResultPage<T>> GetAsync(PagerParams pager = null, TFilter filter = null, CancellationToken cancellationToken = default);
+        Task<OperationResultList<T>> GetAllAsync(CancellationToken cancellationToken = default);
+        Task<OperationResult<int>> GetRecordsCountAsync(TFilter filter, CancellationToken cancellationToken = default);
 
-        Task<OperationResult<T>> AddAsync(T item);
-        Task<OperationResult<T>> UpdateAsync(T item);
-        Task<OperationResult<T>> DeleteAsync(Guid id);
-        Task<OperationResult<T>> UndoDeleteAsync(Guid id);
+        Task<OperationResult<T>> AddAsync(T item, CancellationToken cancellationToken = default);
+        Task<OperationResult<T>> UpdateAsync(T item, CancellationToken cancellationToken = default);
+        Task<OperationResult<T>> DeleteAsync(Guid id, CancellationToken cancellationToken = default);
+        Task<OperationResult<T>> UndoDeleteAsync(Guid id, CancellationToken cancellationToken = default);
     }
 }
