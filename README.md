@@ -1,7 +1,7 @@
 ![logo](logo.png)
 
 # Simplement Framework
-<p>Simple Architecture Toolset for fast prototyping and implementation of enterprise applications.</p>  
+<p>Simple Toolset for fast prototyping and implementation of applications based on Repository Pattern.</p>  
 
 ---
 
